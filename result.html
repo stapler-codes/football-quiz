@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightslategray;
+        }
+        h2 {
+            text-align: center;
+            position: relative;
+            top: 7rem;
+        }
+        button {
+            position: relative;
+            top: 10rem;
+            left: 36rem;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 1rem;
+            border: none;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <h2 id="score">Your Score Is </h2>
+    <form action="questions.html">
+        <button>Restart</button>
+    </form>
+    <script>
+        function load() {
+            var Score = localStorage.getItem("quiz_score")
+            document.getElementById("score").innerHTML = "Your Score Is " + Score
+        }
+    </script>
+</body>
+</html>
